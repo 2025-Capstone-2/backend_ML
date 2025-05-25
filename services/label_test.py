@@ -1,3 +1,5 @@
+## This file is used as a testing point for the feature extraction process.
+
 import glob
 import os
 import pandas as pd

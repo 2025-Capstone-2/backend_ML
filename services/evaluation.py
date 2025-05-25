@@ -1,3 +1,5 @@
+## This file is used as a testing point for the feature extraction process.
+
 # evaluate.py
 import numpy as np
 import glob, os, joblib

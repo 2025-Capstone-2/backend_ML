@@ -1,3 +1,5 @@
+## This file is deprecated and should not be used directly.
+
 import os
 import glob
 import joblib
