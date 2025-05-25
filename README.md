@@ -18,7 +18,7 @@
 4. app.py
 
 # 백엔드 테스트
-1. uvicorn app:app --reload 실행
+1. uvicorn api_server:app --reload 실행
 2. http://127.0.0.1:8000/docs/ 접속
 3. Try it out 선택 -> 파일 업로드 후 실행
 
@@ -26,8 +26,10 @@
 /test-pcap/
 
 # 출력 JSON 형식
+```
 {
   "targets": [
     "02:00:11:22:92:f7|56:8c:94:88:e5:0d"
   ]
 }
+```

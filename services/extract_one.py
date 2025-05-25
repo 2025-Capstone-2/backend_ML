@@ -4,6 +4,10 @@ import subprocess
 from concurrent.futures import ProcessPoolExecutor
 
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PCAP_EXTRACT_PATH = os.path.join(BASE_DIR, "pcap_extract.py")
+
+
 def extract_one(pcap_path, output_dir="features", labels_dir="labels", window=11):
     base = os.path.splitext(os.path.basename(pcap_path))[0]
     feat_file = os.path.join(output_dir, f"{base}.csv")
@@ -12,7 +16,7 @@ def extract_one(pcap_path, output_dir="features", labels_dir="labels", window=11
         subprocess.run(
             [
                 "python",
-                "pcap_extract.py",
+                PCAP_EXTRACT_PATH,
                 "-f",
                 pcap_path,
                 "-o",
