@@ -11,19 +11,16 @@
 # 단일 pcap 파일 검사
 1. python load_and_test_dataset.py --test-pcap your_capture.pcap
 
-# 백엔드 포함
-1. pkl 파일
-2. extract_one.py
-3. pcap_extract.py
-4. app.py
-
 # 백엔드 테스트
 1. uvicorn api_server:app --reload 실행
 2. http://127.0.0.1:8000/docs/ 접속
 3. Try it out 선택 -> 파일 업로드 후 실행
 
 # 엔드포인트
-/test-pcap/
+- GET: /
+  - 서버 상태 확인
+- POST: /pcap/analyze
+  - 구동 엔드포인트
 
 # 출력 JSON 형식
 ```
